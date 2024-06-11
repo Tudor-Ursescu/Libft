@@ -6,12 +6,11 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 14:32:29 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/10 15:27:24 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/11 15:47:38 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -34,5 +33,4 @@ char	*ft_strchr(const char *s, int c)
 // 	char c = 'g';
 
 // 	printf("%s\n", ft_strchr(str, c));
-	
 // }

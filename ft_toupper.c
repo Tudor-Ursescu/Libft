@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 11:33:33 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/10 17:27:41 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/11 15:45:54 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,5 @@ int	ft_toupper(int c)
 // {	
 // 	int c = 'a';
 // 	int b = 'z';
-
-	
 // 	printf("%c %c\n", ft_toupper(c), ft_toupper(b));
 // }

@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 16:54:28 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/10 12:02:39 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/11 15:44:33 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 //     printf("s1,s2: %d\n", strncmp(str1, str2, n));
 
 // 	printf("s1,s3: %d\n", ft_strncmp(str1, str3, n));
-//     printf("s1,s3: %d\n", strncmp(str1, str3, n));
-	
+//  printf("s1,s3: %d\n", strncmp(str1, str3, n));
 // 	printf("s1,s4: %d\n", ft_strncmp(str1, str4, n));
 // 	printf("s1,s4: %d\n", strncmp(str1, str4, n));
 

@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 11:43:44 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/10 14:08:45 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/11 15:39:41 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strnstr(const char *big, const char *small, size_t len)
 // {
 // 	const char	*big_str = "Foo Bar Baz";
 // 	const char	*small_str = "Bar";
-	
+
 // 	char *ptr = ft_strnstr(big_str, small_str, 10);
 // 	printf("%s\n", ptr);
 // }

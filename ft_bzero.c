@@ -6,21 +6,22 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 08:48:08 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/10 11:10:27 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/11 15:28:42 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {
 	char	*ptr;
 
 	ptr = (char *)s;
-	while (n--)
+	while (n)
 	{
-		*ptr++ = 0;
+		*ptr = 0;
+		ptr++;
+		n--;
 	}
 }
 //bzero is used to set a block of memory to zero
@@ -29,6 +30,7 @@ void	ft_bzero(void *s, size_t n)
 //size_t is an unsigned int type, and we include <stddef.h> header for it
 //we iterate over the memory block and set every byte to 0
 
+// #include <stdio.h>
 // int	main(void)
 // {
 // 	char buffer[10] = "Hello";
@@ -40,11 +42,12 @@ void	ft_bzero(void *s, size_t n)
 // 	int i = 0;
 // 	while (i < 10)
 // 	{
-// 		printf("%02x", (unsigned char)buffer[i]);// pirnt in hexadeciaml format to show that all
-// 		i++;												//bytes have been set to 0
+// 		printf("%02x", (unsigned char)buffer[i]);
+		// i++;
 // 	}
 // 	printf("\n");
 
 // 	return (0);
 // }
-
+// pirnt in hexadeciaml format to show that all
+//bytes have been set to 0

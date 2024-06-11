@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 16:42:43 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/10 16:25:22 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/11 15:45:41 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,11 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	char *arr = "Hello, world!";
+// 	size_t i = ft_strlen(arr);
+// 	printf("length of arr is : %zu", i);
+// }

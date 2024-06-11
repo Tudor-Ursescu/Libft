@@ -6,12 +6,11 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 16:24:08 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/10 10:50:51 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/11 15:23:39 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
 
 int	ft_atoi(char *str)
 {
@@ -41,6 +40,7 @@ int	ft_atoi(char *str)
 	return (nb * sign);
 }
 
+// #include <stdio.h>
 // int main(void)
 // {
 //     char str[] = "++323";
