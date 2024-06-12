@@ -6,36 +6,50 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:59:04 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/11 15:27:36 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/12 13:33:46 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	char		*i;
-	const char	*j;
-	size_t		index;
+	char		*mdest;
+	const char	*msrc;
+	size_t		i;
 
-	index = 0;
-	i = (char *)dest;
-	j = (const char *)src;
-	if (dest > src)
+	mdest = (char *)dest;
+	msrc = (const char *)src;
+	if (dest <= src)
 	{
-		while (n)
+		i = 0;
+		while (i < len)
 		{
-			i[n] = j[n];
-			n--;
+			mdest[i] = msrc[len];
+			i++;
 		}
 	}
 	else
 	{
-		while (index < n)
+		i = len;
+		while (i > 0)
 		{
-			i[index] = j[index];
-			index++;
+			i--;
+			mdest[i] = msrc[i];
 		}
 	}
 	return (dest);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	char *src = "hello";
+// 	char dst[10];
+
+// 	ft_memmove(dst, src, sizeof(src));
+
+// 	printf("%s\n", dst);
+
+// 	return (0);
+// }

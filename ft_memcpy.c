@@ -6,27 +6,31 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:22:50 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/11 15:37:02 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/12 13:28:49 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t len)
 {
-	char		*i;
-	const char	*j;
-	size_t		index;
+	char		*mdest;
+	const char	*msrc;
+	size_t		i;
 
-	i = (char *)dest;
-	j = (const char *)src;
-	index = 0;
+	mdest = (char *)dest;
+	msrc = (const char *)src;
+	i = 0;
 	if (!dest && !src)
-		return (dest);
-	while (index < n)
+		return (NULL);
+	while (i < len)
 	{
-		i[index] = j[index];
-		index++;
+		mdest[i] = msrc[i];
+		i++;
 	}
 	return (dest);
 }
+/*
+-difference between memmove and this is that memmove doesn't
+allow memory overlapping
+*/

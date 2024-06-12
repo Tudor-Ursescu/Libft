@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 16:24:08 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/11 15:23:39 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/12 09:27:35 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,9 @@ int	ft_atoi(char *str)
 // #include <stdio.h>
 // int main(void)
 // {
-//     char str[] = "++323";
+//     char str[] = "+-323";
 //     printf("my atoi %d \n", ft_atoi(str));
 //     printf("man atoi %d", atoi(str));
 // }
+
+//should return 0 even for +- or -+;

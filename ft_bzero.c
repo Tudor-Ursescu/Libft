@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 08:48:08 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/11 15:28:42 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/12 08:25:27 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void	ft_bzero(void *s, size_t n)
 //bzero is used to set a block of memory to zero
 //*s is a pointer to the starting adress of the memory
 //n = the number of bytes to be set to zero
-//size_t is an unsigned int type, and we include <stddef.h> header for it
+//size_t is an unsigned long type, and we include <stddef.h> header for it
+//and in printf for it or sizeof we use %zu;
 //we iterate over the memory block and set every byte to 0
 
 // #include <stdio.h>
