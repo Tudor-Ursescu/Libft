@@ -6,13 +6,13 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 16:54:28 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/11 15:44:33 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/14 10:54:46 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <string.h>
-// #include <stdio.h>
+#include <string.h>
+#include <stdio.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -21,7 +21,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (s1[i] == s2[i] && s1[i] && s2[i] && i < n)
+	while (s1[i] == s2[i] && s1[i] && s2[i] && i < (n - 1))
 	{
 		i++;
 	}
@@ -40,7 +40,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 //     printf("s1,s2: %d\n", strncmp(str1, str2, n));
 
 // 	printf("s1,s3: %d\n", ft_strncmp(str1, str3, n));
-//  printf("s1,s3: %d\n", strncmp(str1, str3, n));
+//  	printf("s1,s3: %d\n", strncmp(str1, str3, n));
 // 	printf("s1,s4: %d\n", ft_strncmp(str1, str4, n));
 // 	printf("s1,s4: %d\n", strncmp(str1, str4, n));
 
@@ -59,6 +59,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 // 	printf("s4,s1: %d\n", ft_strncmp(str4, str1, n));
 // 	printf("s4,s1: %d\n", strncmp(str4, str1, n));
+
+// 	printf("%d\n", ft_strncmp("abcdefg", "abcdxyz", 4));
 
 // 	return (0);
 // }

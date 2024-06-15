@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 08:48:08 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/12 08:25:27 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/14 10:54:21 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,10 @@ void	ft_bzero(void *s, size_t n)
 // 	int i = 0;
 // 	while (i < 10)
 // 	{
-// 		printf("%02x", (unsigned char)buffer[i]);
+// 		printf("%d", (unsigned char)buffer[i]);
 		// i++;
 // 	}
 // 	printf("\n");
 
 // 	return (0);
 // }
-// pirnt in hexadeciaml format to show that all
-//bytes have been set to 0

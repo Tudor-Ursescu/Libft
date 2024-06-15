@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 15:28:13 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/10 15:46:37 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/15 13:28:46 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(char *src)
 	len = 0;
 	while (src[len])
 		len++;
-	dest = (char *)malloc(sizeof(char) * (len + 1));
+	dest = malloc(sizeof(char) * (len + 1));
 	if (dest == NULL)
 		return (NULL);
 	while (i < len)
@@ -33,6 +33,10 @@ char	*ft_strdup(char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+/*
+-the function returns a pointer to a new string which is a duplicate of
+the string s.
+*/
 
 // #include <stdio.h>
 

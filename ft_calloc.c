@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 16:41:32 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/11 17:25:27 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/13 15:25:43 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_calloc(size_t nb, size_t size)
 	size_t	length;
 	void	*point;
 
-	if (nb == 0 || size == 0)
-		return (NULL);
+	if (nb == 0 && size == 0)
+		return (malloc(0));
 	length = nb * size;
 	point = malloc(length);
 	if (point == NULL)
@@ -32,7 +32,7 @@ void	*ft_calloc(size_t nb, size_t size)
 -calloc() allocates memory for an array of 'nb' elements of 'size' bytes each
 and returns a pointer (*point) to the allocated memory.
 -the memory is set to zero, that is why we use the ft_bzero function.
-- malloc(nb * size);(man) 
+- malloc(nb * size);(man)
 */
 
 // #include <stdio.h>
@@ -54,7 +54,7 @@ and returns a pointer (*point) to the allocated memory.
 // 		printf("array [%zu] = %d\n", i, array[i]);
 // 		i++;
 // 	}
-// 	free(array);	
+// 	free(array);
 // 	return (0);
 // }
 

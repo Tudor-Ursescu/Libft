@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 08:27:08 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/11 15:28:33 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/15 13:17:00 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr_fd(*s, fd);
+	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
+
+// int main(void)
+// {
+// 	char str[] = "Hello, world!";
+// 	ft_putendl_fd(str, 1);
+// 	return (0);
+// }

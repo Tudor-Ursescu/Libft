@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 08:04:24 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/11 15:28:31 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/15 13:10:38 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,9 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+
+// int main(void)
+// {
+// 	ft_putchar_fd('c', 1);
+// 	return (0);
+// }

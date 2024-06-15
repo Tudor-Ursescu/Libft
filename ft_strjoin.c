@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 15:47:05 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/12 10:32:19 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/15 13:38:07 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	while (s2[j])
 		result[i++] = s2[j++];
+	result[i] = '\0';
 	return (result);
 }
 /*
-- strjoin returns a new string that is the result of
+- strjoin returns a pointer to a new string that is the result of
 concatenating 's1' and 's2';
 - 's1' = prefix string;
 - 's2' = suffix string;

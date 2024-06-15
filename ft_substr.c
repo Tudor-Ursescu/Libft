@@ -6,22 +6,24 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 14:13:01 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/11 15:45:50 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/15 13:26:11 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*subway;
 
 	i = 0;
+	if (start >= ft_strlen(s))
+		len = 0;
 	subway = malloc(sizeof(char) * (len + 1));
 	if (subway == NULL)
 		return (NULL);
-	while (i < len)
+	while (i < len && s[start])
 	{
 		subway[i] = s[start];
 		i++;
@@ -31,7 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (subway);
 }
 
-//The function allocates and returns a subtring from the sstring s. 
+//The function allocates and returns a subtring from the string s. 
 //It starts at index 'start' and is of max size 'len'.
 
 // #include <stdio.h>

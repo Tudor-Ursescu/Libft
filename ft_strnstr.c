@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 11:43:44 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/11 15:39:41 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/15 13:36:13 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,14 @@ char	*ft_strnstr(const char *big, const char *small, size_t len)
 	}
 	return (NULL);
 }
-
+/*
+-the function finds the first occurance of the str 'small' in the sts 'big',
+where not more than 'lan' chars are searched.
+- if 'small' is empty, big is returned;
+- if 'small' doesn't appear at all,  NULL is returned;
+- otherwise the function returns a ponter to the first char of the 
+first occurance of 'small';
+*/
 // int	main(void)
 // {
 // 	const char	*big_str = "Foo Bar Baz";

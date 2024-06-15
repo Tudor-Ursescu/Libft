@@ -6,13 +6,13 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 16:24:08 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/12 09:27:35 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/13 15:41:40 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	nb;
 	int	sign;
