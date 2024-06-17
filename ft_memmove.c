@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:59:04 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/15 13:05:56 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/17 09:04:09 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	char		*mdest;
-	const char	*msrc;
+	char		*pdest;
+	const char	*psrc;
 	size_t		i;
 
-	mdest = (char *)dest;
-	msrc = (const char *)src;
+	pdest = (char *)dest;
+	psrc = (const char *)src;
 	if ((!dest && !src) || dest == src)
 		return (dest);
 	if (dest <= src)
@@ -27,18 +27,14 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 		i = 0;
 		while (i < len)
 		{
-			mdest[i] = msrc[i];
+			pdest[i] = psrc[i];
 			i++;
 		}
 	}
 	else
 	{
-		i = len;
-		while (i > 0)
-		{
-			i--;
-			mdest[i] = msrc[i];
-		}
+		while (len-- > 0)
+			pdest[len] = psrc[len];
 	}
 	return (dest);
 }

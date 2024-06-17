@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 18:06:47 by turescu           #+#    #+#             */
-/*   Updated: 2024/06/16 20:32:54 by turescu          ###   ########.fr       */
+/*   Updated: 2024/06/17 08:41:58 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,17 @@ size_t	count_words(const char *s, char c)
 	return (words);
 }
 
-int	safe_malloc( char **words_v, int position, size_t buffer)
+int	safe_malloc( char **word_v, int position, size_t buffer)
 {
 	int	i;
 
 	i = 0;
-	words_v[position] = malloc(buffer);
-	if (words_v[position] == NULL)
+	word_v[position] = malloc(buffer);
+	if (word_v[position] == NULL)
 	{
 		while (i < position)
-			free(words_v[i++]);
-		free(words_v);
+			free(word_v[i++]);
+		free(word_v);
 		return (1);
 	}
 	return (0);
@@ -56,13 +56,12 @@ int	fill(char **word_v, const char *s, char c)
 	while (*s)
 	{
 		len = 0;
-		if (*s == c)
+		while (*s == c && *s)
 			s++;
-		else if (*s != c)
+		while (*s != c && *s)
 		{
 			len++;
-			while (*s != c && *s)
-				s++;
+			s++;
 		}
 		if (len > 0)
 		{
@@ -87,12 +86,23 @@ char	**ft_split(const char *s, char c)
 	if (word_v == NULL)
 		return (NULL);
 	word_v[words] = NULL;
-	fill(word_v, s, c);
 	if (fill(word_v, s, c))
 		return (NULL);
 	return (word_v);
 }
 
+// #include <stdio.h>
+// int main (void)
+// {
+// 	char	*s = " 12-3 dasda *&#^@  Hello there, friend!!!";
+// 	char	**v = ft_split(s, ' ');
+
+// 	while (*v)
+// 	{
+// 		printf("%s\n", *v);
+// 		v++;
+// 	}
+// }
 /*
 - the function allocates and returns an array of strings obtained
 by splitting 's' using the char 'c' as a delimiter.
@@ -102,15 +112,3 @@ by splitting 's' using the char 'c' as a delimiter.
 3) Coppy the word/token in the correct position
 - 27 to iterate trough the whole word, without incrementing 'words' again
 */
-#include <stdio.h>
-int main (void)
-{
-	char	*s = "   Hello there, friend!!!";
-	char	**v = ft_split(s, ' ');
-
-	while (*v)
-	{
-		printf("%s\n", *v);
-		v++;
-	}
-}
