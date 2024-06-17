@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 11:27:34 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/13 15:50:50 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/17 10:40:01 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (i[j] == (char)c)
 		{
-			return ((char *)s + j);
+			return (i + j);
 		}
 		j++;
 	}
@@ -33,6 +33,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 /*
 -ft_memchr() scans the initial 'n' bytes of the memory block pointed by 's' for
 the first instance of 'c'.
+-returns a pointer to the matching byte;
+- 26 same thing as return ((char *)s + i);
 */
 
 // #include <stdio.h>
@@ -64,5 +66,4 @@ the first instance of 'c'.
 /*
 -we first test the function when the char c actually apears in the str.
 -second test case is where c is not in str (from c = 'z').
-!- when testing complile with ft_strlen.c
 */

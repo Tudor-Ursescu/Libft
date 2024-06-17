@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:22:50 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/15 13:00:58 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/17 11:37:38 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t len)
 {
-	char		*mdest;
-	const char	*msrc;
+	char		*pdest;
+	const char	*psrc;
 	size_t		i;
 
-	mdest = (char *)dest;
-	msrc = (const char *)src;
+	pdest = (char *)dest;
+	psrc = (const char *)src;
 	i = 0;
 	if (!dest && !src)
 		return (NULL);
 	while (i < len)
 	{
-		mdest[i] = msrc[i];
+		pdest[i] = psrc[i];
 		i++;
 	}
 	return (dest);
@@ -33,7 +33,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 /*
 -difference between memmove and this is that memmove doesn't
 allow memory overlapping, making memcpy less safe, but faster;
--memcpy() cpoies n chars from 'src' to 'dst'.
+-memcpy() cpoies n chars from 'src' to 'dest'.
 */
 
 // #include <stdio.h>
