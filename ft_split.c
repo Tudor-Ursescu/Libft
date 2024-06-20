@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/16 18:06:47 by turescu           #+#    #+#             */
-/*   Updated: 2024/06/17 18:31:21 by tursescu         ###   ########.fr       */
+/*   Created: 2024/06/19 12:42:10 by tursescu          #+#    #+#             */
+/*   Updated: 2024/06/19 13:13:35 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(const char *s, char c)
+static size_t	count_words(const char *s, char c)
 {
 	size_t	count;
 	size_t	i;
@@ -33,7 +33,7 @@ size_t	count_words(const char *s, char c)
 	return (count);
 }
 
-size_t	word_len(const char *s, char c)
+static size_t	word_len(const char *s, char c)
 {
 	size_t	i;
 
@@ -43,7 +43,7 @@ size_t	word_len(const char *s, char c)
 	return (i);
 }
 
-void	free_array(size_t	i, char **array)
+static void	free_array(size_t	i, char **array)
 {
 	while (i > 0)
 	{
@@ -53,7 +53,7 @@ void	free_array(size_t	i, char **array)
 	free(array);
 }
 
-char	**split(char const *s, char c, char **array, size_t words_count)
+static char	**fill_arr(const char *s, char c, char **array, size_t words_count)
 {
 	size_t	i;
 	size_t	j;
@@ -89,7 +89,7 @@ char	**ft_split(const char *s, char c)
 	array = malloc(sizeof(char *) * (words + 1));
 	if (array == NULL)
 		return (NULL);
-	array = split(s, c, array, words);
+	array = fill_arr(s, c, array, words);
 	return (array);
 }
 

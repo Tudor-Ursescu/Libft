@@ -6,13 +6,13 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 15:28:13 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/15 13:28:46 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/19 13:17:20 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	int		len;

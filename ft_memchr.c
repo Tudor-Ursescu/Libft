@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 11:27:34 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/17 10:40:01 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/19 13:01:56 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (j < n)
 	{
 		if (i[j] == (char)c)
-		{
 			return (i + j);
-		}
 		j++;
 	}
 	return (NULL);

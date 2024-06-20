@@ -6,7 +6,7 @@
 #    By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/08 14:19:44 by tursescu          #+#    #+#              #
-#    Updated: 2024/06/14 12:47:02 by tursescu         ###   ########.fr        #
+#    Updated: 2024/06/19 18:13:33 by tursescu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ INCL = libft.h
 OBJS :=  $(SRCS:.c=.o)
 CC = cc
 RM = rm -f
-CFLAGS = -Wall -Werror -Wextra -I $(INCL)
+CFLAGS = -Wall -Werror -Wextra
 NAME = libft.a
 all: $(NAME)
 $(NAME): $(OBJS)
@@ -32,3 +32,10 @@ fclean: clean
 	$(RM) $(NAME)
 re: fclean $(NAME)
 .PHONY: all clean fclean re
+test: all
+	@rm a.out
+	@make fclean
+
+test: all
+	@rm a.out
+	@make fclean

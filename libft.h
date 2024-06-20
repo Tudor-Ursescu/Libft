@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 16:02:55 by tursescu          #+#    #+#             */
-/*   Updated: 2024/06/17 17:46:34 by tursescu         ###   ########.fr       */
+/*   Updated: 2024/06/19 20:58:38 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stddef.h>
+// # include <stddef.h>
 
 int		ft_atoi(const char *str);
 int		ft_isalnum(int c);
@@ -42,7 +42,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memset(void *s, int c, size_t len);
 char	*ft_strchr(const char *s, int c);
-char	*ft_strdup(char *src);
+char	*ft_strdup(const char *src);
 char	*ft_strnstr(const char *big, const char *small, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -51,4 +51,5 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(const char *s1, const char *set);
 char	*ft_itoa(int n);
 char	**ft_split(const char *s, char c);
+
 #endif
