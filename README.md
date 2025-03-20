@@ -28,7 +28,7 @@ Compile your project with:
 gcc -Wall -Wextra -Werror your_file.c -L. -lft -o output
 ```
 ## 📜 License
-This project is open-source under the [MIT License](LICENSE).
+This project is open-source.
 
 ## 👤 Author
 [**Tudor Ursescu**](https://github.com/Tudor-Ursescu)
