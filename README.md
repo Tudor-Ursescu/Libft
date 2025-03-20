@@ -1,4 +1,4 @@
-# Libft - Custo C Standard Library
+# Libft - Custom C Standard Library
 
 ## 📌 Overview
 Libft is a custom implementation of essential functions from the C standard library. This project is part of the 42 School curriculum and serves as a foundation for understanding low-level programming and memory management.
